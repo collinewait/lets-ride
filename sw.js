@@ -1,4 +1,4 @@
-const rideCacheName = 'ride-cache-v1';
+const rideCacheName = 'ride-cache-v2';
 
 const ursToCatch = [
     '/',
