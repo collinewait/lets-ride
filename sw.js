@@ -12,10 +12,11 @@ const ursToCatch = [
     'js/main.js',
     'js/reusable.js',
     'js/ride.js',
-    '/js/user.js',
+    'js/user.js',
     'css/main.css',
     'css/responsive.css',
-    'images/bicycle-ride.png'
+    'images/bicycle-ride.png',
+    'images/icons/icon-72x72.png'
 ];
 
 self.addEventListener('install', (event) => {
