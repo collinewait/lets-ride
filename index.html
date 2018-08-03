@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ride My Way | Add Ride</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="png" href="images/icons/icon-72x72.png">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <img class="header__logo" src="images/bicycle-ride.png" alt="two people riding a bicycle">
+            <h1 class="header__title">
+                Ride My Way
+            </h1>
+            <h1 class="header__logout">
+                <a id="log_out">Log out</a>
+            </h1>
+        </div>
+    </header>
+    <div id="loader"></div>
+    <main>
+        <section class="content" id="main_content">
+            <div id="dialogoverlay"></div>
+            <div id="dialogbox">
+                <div id="dialog_container">
+                    <div id="dialogboxhead"></div>
+                    <div id="dialogboxbody"></div>
+                    <div id="dialogboxfoot"></div>
+                </div>
+            </div>
+            <div id="driver_menu_container">
+                <div id="driver_container">
+                    <!-- Tab menu-->
+                    <div class="tab" id="myMenu">
+                        <button class="tablinks" id="defaultOpen" type="button">View Offers</button>
+                        <button class="tablinks" id="requests_button" type="button">View Requests</button>
+                        <button class="tablinks" id="add_ride_button" type="button">+Add Ride</button>
+                        <button class="tablinks" id="all_rides_button" type="button">All Rides</button>
+                    </div>
+                    <!-- Tab content containg available ride offers-->
+                    <div id="view_offers" class="tabcontent">
+                        <h2>Available Ride Offers</h2>
+                        <div class="ride_offers" id="all_rides_div">
+                            <table class="table_display">
+                                <thead>
+                                    <tr>
+                                        <th>Start Point</th>
+                                        <th>Stop point</th>
+                                        <th>Seats</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rides_data">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2 class="not_available" id="ride_offers_message"></h2>
+                        <!-- Modal to display details of a ride offer-->
+                        <div class="modal_container">
+                            <div id="details_modal" class="modal">
+                                <div class="details_content">
+                                    <span class="close">&times</span>
+                                    <table class="table_display">
+                                        <col width="25%">
+                                        <col width="20%">
+                                        <col width="30%">
+                                        <col width="25%">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <span class="full"> Driver Name</span>
+                                                    <span class="abbr">Driver</span>
+                                                </th>
+                                                <th>
+                                                    <span class="full"> Driver Id</span>
+                                                    <span class="abbr">Identity</span>
+                                                </th>
+                                                <th>
+                                                    <span class="full">Departure Date</span>
+                                                    <span class="abbr"> Date</span>
+                                                </th>
+                                                <th>
+                                                    <span class="full">Departure Date</span>
+                                                    <span class="abbr">Time</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ride_data">
+
+                                        </tbody>
+                                    </table>
+                                    <button id="ride_request">Request Ride</button>
+                                    <button id="cancel_request">close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab content containing requests made to the ride offer-->
+                    <div id="view_requests" class="tabcontent">
+                        <h2>Passenger Requests</h2>
+                        <div id="rides_dropdown" class="container">
+                            <div id="dropdown_label" class="box dropdown_label">
+                                <label for="ride_offer">Select a ride</label>
+                            </div>
+                            <div id="dropdown" class="box dropdown">
+                                <select id="ride_offer" name="ride_offer"></select>
+                            </div>
+                        </div>
+                        <div class="requests" id="requests_div">
+                            <table class="table_display" id="ride_request_table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Status.</th>
+                                        <th colspan="2">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ride_requests"></tbody>
+                            </table>
+                        </div>
+                        <h2 class="not_available" id="ride_request_message"></h2>
+                    </div>
+                    <!-- Tab content enabling addition of a ride offer-->
+                    <div id="add_ride" class="tabcontent">
+                        <div class="form_container">
+                            <h2>Add a Ride Offer</h2>
+                            <form id="add_ride_form">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="departure_location">Departure Location</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="departure_location" name="departure_location" placeholder="Enter your departure location" autofocus
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="destination">Destination</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="text" id="destination" name="destination" placeholder="Enter your destination" autofocus required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="departure_date">Departure date</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="date" id="departure_date" name="departure_date" placeholder="Enter departure date" autofocus required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="departure_time">Departure time</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="time" id="departure_time" value="12:00" name="departure_time" placeholder="Enter dparture time" autofocus required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="no_of_passengers">Number of passengerss</label>
+                                    </div>
+                                    <div class="col-75">
+                                        <input type="number" id="no_of_passengers" name="no_of_passengers" placeholder="Enter number of passengers" required/>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="col-25 reset">
+                                            <input type="reset" value="Cancel">
+                                        </div>
+                                        <div class="col-75 save">
+                                            <input type="submit" value="Save">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--  Tab content containing rides given and taken -->
+                    <div id="all_rides" class="tabcontent">
+                        <h2>Rides Given and taken</h2>
+                        <div class="container">
+                            <div id="no_of_rides_given"></div>
+                            <div id="no_of_rides_taken">
+                                <p>Number of Rides Taken: 2</p>
+                            </div>
+                        </div>
+                        <div class="rides_given_taken" id="taken_given_div">
+                            <table class="table_display">
+                                <thead>
+                                    <tr>
+                                        <th>Driver Name</th>
+                                        <th>Ride Id</th>
+                                        <th>Given/ Taken</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rides_tbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2 class="not_available" id="rides_taken_given_message"></h2>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Ride My Way, Copyright &copy; 2018</p>
+        </footer>
+    </main>
+    <script src="js/main.js" type="module"></script>
+    <script src="js/all_rides.js" type="module"></script>
+    <script src="js/ride.js" type="module"></script>
+</body>
+
+</html>

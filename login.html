@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ride My Way | Log in</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="icon" type="png" href="images/icons/icon-72x72.png">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <img class="header__logo" src="images/bicycle-ride.png" alt="two people riding a bicycle">
+            <h1 class="header__title">
+                Ride My Way
+            </h1>
+        </div>
+    </header>
+    <div id="loader"></div>
+    <main>
+        <section class="content">
+            <div id="dialogoverlay"></div>
+            <div id="dialogbox">
+                <div id="dialog_container">
+                    <div id="dialogboxhead"></div>
+                    <div id="dialogboxbody"></div>
+                    <div id="dialogboxfoot"></div>
+                </div>
+            </div>
+            <div id="log_in_container">
+                <div class="form_container">
+                    <h2>Log in</h2>
+                    <form id="login_user">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email Address</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="email_address" name="email" placeholder="Your email address" autofocus required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="password" name="password" placeholder="Your password" required/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="container">
+                                <div class="col-25 forgot_password">
+                                    <a href="#">Forgot password</a>
+                                    <a href="signup.html">Signup</a>
+                                </div>
+                                <div class="col-75 sign_up">
+                                    <input type="submit" value="Log in">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/dialogs.js" type="module"></script>
+    <script src="js/login.js" type="module"></script>
+
+</body>
+
+</html>

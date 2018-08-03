@@ -1,0 +1,177 @@
+/*sign up css also some parts reused by other pages**/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .log_in{order: 1;}
+
+@media screen and (max-width: 600px) {
+    .header__logo {
+        height: 48px;
+        margin-right: 0.5em;
+      }
+    .header__title {
+        margin-left: 0;
+        font-size: 2em;
+        vertical-align: bottom; 
+    }
+    .col-25, .col-75, input[type=submit], input[type=reset] {
+      width: 100%;
+      margin-top: 5px;
+    }
+    
+    .forgot_password{order: 1;}
+    .reset{order: 1}
+    .forgot_password a{
+      padding: 0.3em 1.5em 1.5em 1.5em
+    }
+  }
+
+@media screen and (min-width: 850px) {
+    main, .header__inner, .content {
+      width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .forgot_password{order: 1;}
+
+    .details_content{
+      padding: 17%;
+    }
+  
+    .full {
+      display: inline;
+    }
+    .abbr {
+      display: none;
+    }
+    .forgot_password a{
+      padding: 0.3em 1.5em 1.5em 1.5em
+    }
+
+    .sticky{
+      width: 815px;
+    }
+}
+
+/*Log in css**/
+@media screen and (min-width: 350px) {
+ #log_in_container{
+    width: 350px;
+    height: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5% 0px 0px 0px;
+ }
+
+ #log_in_container .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 849px){
+    .forgot_password{order: 1;}
+    .details_content{
+      padding: 3%;
+    }
+  
+    .full {
+      display: inline;
+    }
+    .abbr {
+      display: none;
+    }
+    .forgot_password a{
+      padding: 0.3em 1.5em 1.5em 1.5em
+    }
+}
+
+@media screen and (min-width: 601px){
+
+  #add_ride .form_container .col-25{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+
+  #add_ride .form_container .reset{
+    padding: 0px 5% 0px 0px;
+  }
+
+    #add_ride .form_container .col-75{
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+    }
+
+    .save{order: 1}
+
+    #dropdown_label, #dropdown, #no_of_rides_taken, #no_of_rides_given{
+      width: 50%;
+    }
+    #dropdown_label, #no_of_rides_taken, #no_of_rides_given{
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px){
+  .details_content{
+    padding: 1%;
+  }
+  .full {
+    display: none;
+  }
+  .abbr {
+    display: inline;
+  }
+
+  .header__logout{
+    font-size: 1.5em;
+  }
+  #dialogbox{
+    margin: 10%;
+  }
+  #dropdown_label, #dropdown{
+    width: 100%;
+  }
+  #no_of_rides_taken, #no_of_rides_given{
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px){
+  .details_content{
+    padding: 2%;
+  }
+
+  .full {
+    display: none;
+  }
+  .abbr {
+    display: inline;
+  }
+  #dialogbox{
+    margin: 10%;
+  }
+  #dropdown_label, #dropdown, #no_of_rides_taken, #no_of_rides_given{
+    width: 50%;
+  }
+  #dropdown_label, #no_of_rides_taken, #no_of_rides_given{
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 800px){
+  #dialogbox{
+    width: 620px;
+  }
+}
+
+@media screen and (min-width: 387px) and (max-width: 554px){
+  .tab{
+    height: 57px;
+  }
+}
