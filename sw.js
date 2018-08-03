@@ -1,7 +1,6 @@
 const rideCacheName = 'ride-cache-v2';
 
 const ursToCatch = [
-     '/',
     '/index.html',
     '/login.html',
     '/signup.html',
@@ -9,7 +8,14 @@ const ursToCatch = [
     '/js/cookie_file.js',
     '/js/dialogs.js',
     '/js/login.js',
-    '/js/main.js'
+    '/js/main.js',
+     '/js/reusable.js',
+    '/js/ride.js',
+    '/js/user.js',
+    '/css/main.css',
+    '/css/responsive.css',
+    '/images/bicycle-ride.png',
+    '/images/icons/icon-72x72.png'
 ];
 
 self.addEventListener('install', (event) => {
