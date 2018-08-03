@@ -1,6 +1,15 @@
 const rideCacheName = 'ride-cache-v2';
 
 const ursToCatch = [
+     '/',
+    '/index.html',
+    '/login.html',
+    '/signup.html',
+    '/js/all_rides.js',
+    '/js/cookie_file.js',
+    '/js/dialogs.js',
+    '/js/login.js',
+    '/js/main.js'
 ];
 
 self.addEventListener('install', (event) => {
