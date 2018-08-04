@@ -1,6 +1,6 @@
 const rideCacheName = 'ride-cache-v2';
 
-const ursToCatch = [
+var ursToCatch = [
     '/index.html',
     '/login.html',
     '/signup.html',
