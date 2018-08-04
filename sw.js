@@ -1,4 +1,4 @@
-const rideCacheName = 'ride-cache-v2';
+const rideCacheName = 'ride-cache-v1';
 
 const ursToCatch = [
     './index.html',
@@ -42,7 +42,7 @@ self.addEventListener('activate', (event) => {
         })
     );
 });
-
+/** 
 self.addEventListener('fetch', event => {
 
     event.respondWith(
@@ -57,9 +57,9 @@ self.addEventListener('fetch', event => {
             )
     );
 
-});
+});*/
 
-/*self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
 
     event.respondWith(
         fetch(event.request)
@@ -71,4 +71,4 @@ self.addEventListener('fetch', event => {
             )
     );
 
-});*/
+});
