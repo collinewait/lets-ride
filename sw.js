@@ -1,21 +1,21 @@
 const rideCacheName = 'ride-cache-v2';
 
-var ursToCatch = [
-    '/index.html',
-    '/login.html',
-    '/signup.html',
-    '/js/all_rides.js',
-    '/js/cookie_file.js',
-    '/js/dialogs.js',
-    '/js/login.js',
-    '/js/main.js',
-     '/js/reusable.js',
-    '/js/ride.js',
-    '/js/user.js',
-    '/css/main.css',
-    '/css/responsive.css',
-    '/images/bicycle-ride.png',
-    '/images/icons/icon-72x72.png'
+const ursToCatch = [
+    './index.html',
+    './login.html',
+    './signup.html',
+    'js/all_rides.js',
+    'js/cookie_file.js',
+    'js/dialogs.js',
+    'js/login.js',
+    'js/main.js',
+    'js/reusable.js',
+    'js/ride.js',
+    'js/user.js',
+    'css/main.css',
+    'css/responsive.css',
+    'images/bicycle-ride.png',
+    'images/icons/icon-72x72.png'
 ];
 
 self.addEventListener('install', (event) => {
